@@ -1,0 +1,71 @@
+/* Styling variables to centralize styling */
+:root {
+  /* Color Pallete */
+  --palDark: #4d4646;
+  --palMedium: #5b5656;
+  --palLight: #7fcd91;
+  --palWhite: #fff;
+  --palAccent: #f5eaea;
+}
+
+/* Set box sizing universally to calculate the width & height as part of the element*/
+* {
+  box-sizing: border-box;
+}
+
+/* Set the page to light color and remove margins */
+body {
+  display: flex;
+  line-height: 1.3;
+  min-height: 100%;
+  margin: 0;
+  line-height: 1;
+  background-color: var(--palWhite);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 15px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  top: 0px;
+  position: fixed;
+  padding: 1%;
+  background-color: var(--palWhite);
+  color: var(--pal2light);
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%);
+  font-size: 15px;
+  z-index: 1;
+}
+
+header h1 {
+  margin: 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+/* Remove underline style from links in nav bar */
+nav a {
+  text-decoration: none;
+}
+
+/* Change display to column at less then 480px in width */
+@media screen and (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+    min-width: 100px;
+    min-height: 100px;
+    padding: 5%;
+    margin: 0;
+  }
+}
