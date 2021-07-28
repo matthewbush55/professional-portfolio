@@ -14,8 +14,6 @@
 }
 
 body {
-  /* Set the body to a flex container and wrap child elements to fit in the container */
-  flex-flow: wrap;
   /* Set the viewport height to never be less than 100% */
   min-height: 100%;
   margin: 0;
@@ -34,8 +32,8 @@ header {
   /* Set the header to fill the width of the viewport */
   width: 100%;
   /* Fix header to the top of the viewport */
+  position: sticky;
   top: 0px;
-  position: fixed;
   padding: 20px;
   background-color: var(--palWhite);
   color: var(--pal2light);
@@ -69,6 +67,47 @@ nav a {
   padding: 0 10px 0 10px;
 }
 
+.container-main {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 50px;
+}
+
+.container-cards {
+  display: flex;
+  flex-flow: row wrap;
+  /* padding: 0 150px 20px 150px; */
+  background-color: #cacaca;
+  margin-bottom: 20px;
+}
+
+.card,
+.card-main {
+  position: relative;
+  border-style: solid;
+  border-color: var(--palDark);
+  flex: 1;
+}
+
+.card-main {
+  min-width: 100%;
+}
+
+.card-label {
+  position: absolute;
+  background-color: var(--palLight);
+  box-shadow: none;
+  bottom: 10%;
+  padding: 15px 40px 15px 0;
+  z-index: 0;
+}
+
+.card img {
+  width: 100%;
+  min-width: 100px;
+  border: none;
+}
+
 /* Class to style text with a wide format */
 .wide-spacing {
   letter-spacing: 4px;
@@ -95,5 +134,31 @@ nav a {
   /* Adjust padding of header elements when viewport is less then 589px in width  */
   header.wide-spacing {
     padding: 0 5px 0 15px;
+  }
+
+  .card-label {
+    padding: 10px 30px 10px 0;
+  }
+}
+
+@media screen and (max-width: 417px) {
+  .container-cards {
+    flex-direction: column;
+    justify-content: space-evenly;
+    /* Align elements on the right side of the header */
+    align-items: flex-end;
+    /* Fix header from shrinking past 100px to prevent elements from becoming to close and/or out of the viewport*/
+    min-width: 100px;
+    min-height: 100px;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+@media screen and (max-width: 334px) {
+  .card-label {
+    position: sticky;
+    text-align: center;
+    padding: 10px 0;
   }
 }
