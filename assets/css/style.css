@@ -43,6 +43,30 @@ header {
   z-index: 1;
 }
 
+.banner-container {
+  display: flex;
+  position: relative;
+  top: 0px;
+  left: 0px;
+}
+
+.banner-img {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%);
+  height: 700px;
+  width: 100%;
+}
+
+.self-portrait {
+  position: absolute;
+  bottom: 25px;
+  right: 30px;
+  max-width: 200px;
+  border-radius: 50%;
+}
+
 header h1 {
   margin: 0;
 }
@@ -71,6 +95,8 @@ nav a {
   display: flex;
   flex-direction: column;
   padding: 25px 50px;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
 .container-cards {
@@ -81,16 +107,17 @@ nav a {
   margin-bottom: 20px;
 }
 
+.card-main {
+  min-width: 100%;
+  height: auto;
+}
+
 .card,
 .card-main {
   position: relative;
   border-style: solid;
   border-color: var(--palDark);
   flex: 1;
-}
-
-.card-main {
-  min-width: 100%;
 }
 
 .card-label {
@@ -136,8 +163,16 @@ nav a {
     padding: 0 5px 0 15px;
   }
 
+  .container-main {
+    margin: 0;
+  }
+
   .card-label {
     padding: 10px 30px 10px 0;
+  }
+
+  section p {
+    font-size: 12px;
   }
 }
 
@@ -160,5 +195,27 @@ nav a {
     position: sticky;
     text-align: center;
     padding: 10px 0;
+  }
+  section p {
+    font-size: 10px;
+  }
+
+  .banner-img {
+    display: none;
+  }
+
+  .self-portrait {
+    position: relative;
+    width: 50%;
+    height: 50%;
+    margin: 50px 75px 0 100px;
+  }
+
+  .container-main {
+    padding: 0px 50px;
+  }
+
+  .container-main h2 {
+    text-align: center;
   }
 }
