@@ -6,6 +6,7 @@
   --palLight: #ffcb74;
   --palWhite: #fff;
   --palAccent: #b1b493;
+  --palHeaderFooter: #f7f7f7;
 }
 
 /* Set box sizing universally to calculate the width & height as part of the element*/
@@ -18,7 +19,7 @@ body {
   min-height: 100%;
   margin: 0;
   /* Set line heights for the page */
-  line-height: 1;
+  line-height: 2;
   background-color: var(--palWhite);
   font-family: Verdana, sans-serif;
   font-size: 15px;
@@ -35,7 +36,7 @@ header {
   position: sticky;
   top: 0px;
   padding: 20px;
-  background-color: var(--palWhite);
+  background-color: var(--palHeaderFooter);
   color: var(--pal2light);
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%);
   font-size: 15px;
@@ -145,9 +146,32 @@ nav a {
 }
 
 .card img {
-  width: 100%;
-  min-width: 100px;
+  max-width: 100%;
+  height: auto;
   border: none;
+}
+
+.container-contact ul {
+  /* Set the header to a flex container and add space between its child elements */
+  display: flex;
+  justify-content: space-evenly;
+  /* Set the nav ul element width to never be less than 300px for proper spacing between  */
+  min-width: 300px;
+  /* Remove underline and bullets from ul elements */
+  text-decoration: none;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.container-contact img {
+  width: 64px;
+  height: 64px;
+}
+
+#logo-resize {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Class to style text with a wide format */

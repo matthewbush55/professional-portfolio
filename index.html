@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css" /> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
     <title>Matt Bush - Professional Portfolio</title>
   </head>
@@ -15,9 +15,9 @@
       <!-- Navigation bar -->
       <nav>
         <ul>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -28,19 +28,14 @@
 
     <main class="container-main">
         <!-- About, Portfolio, and Contact Sections -->
-        <section>
+        <section id="about">
           <h2>About</h2>
           <p>
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maiores similique vitae laborum atque provident
-            mollitia ipsa error. Id error tenetur quos beatae ea eligendi, minus iste accusantium cupiditate quidem
-            exercitationem? Nihil rem, distinctio dolorem veritatis culpa recusandae odit aspernatur sapiente vitae
-            voluptatem, nemo maxime, sunt sequi tempore non facilis exercitationem ad dignissimos placeat nostrum quas
-            perferendis expedita ducimus. Voluptatum iure inventore culpa repudiandae maxime. Nobis labore accusamus
-            libero quibusdam veritatis voluptatem quasi doloremque vel praesentium dolorem vitae doloribus esse repellat
-            exercitationem eius voluptatibus fuga neque, iusto nemo velit dicta assumenda?
+            Detail-oriented front-end web developer leveraging I.T./Cybersecurity background to build more engaging and secure applications on the web. Recently earned a certificate in full stack development from the University of Denver, with newly developed skills in JavaScript, CSS, React.js, and responsive web design. Known as an analytical problem solver with a never-ending drive to constantly improve on projects and skills. With each project, my aim is to fully understand my customer’s desired outcome and exceed their expectations. I’m excited to leverage my skills as part of a fast-paced, quality-driven team to create better experiences on the web. 
           </p>
         </section>
-        <section>
+        <section id="portfolio">
+          <hr>
           <h2>Portfolio</h2>
           <section class="container-cards">
             <div class="card card-main">
@@ -48,40 +43,57 @@
                 <p>Card Main</p>
                 <p class="card-description-font">description</p>
               </div>
-              <img src="./assets/images/coming-soon.jpg" alt="Project Placeholder Image 1">
+              <a href="#">
+                <img src="./assets/images/coming-soon.jpg" alt="Project Placeholder Image 1">
+              </a>
             </div>
             <div class="card">
               <div class="card-label">
                 <p>Card 2</p>
                 <p class="card-description-font">description</p>
               </div>
-              <img src="./assets/images/coming-soon.jpg" alt="Project Placeholder Image 2">
+              <a href="#">
+                <img src="./assets/images/coming-soon.jpg" alt="Project Placeholder Image 2">
+              </a>
             </div>
             <div class="card">
               <div class="card-label">
                 <p>Card 3</p>
                 <p class="card-description-font">description</p>
               </div>
-              <img src="./assets/images/coming-soon.jpg" alt="Project Placeholder Image 3">
+              <a href="#">
+                <img src="./assets/images/coming-soon.jpg" alt="Project Placeholder Image 3">
+              </a>
             </div>
             <div class="card">
               <div class="card-label">
                 <p>Card 4</p>
                 <p class="card-description-font">description</p>
               </div>
-              <img src="./assets/images/coming-soon.jpg" alt="Project Placeholder Image 4">
+              <a href="#">
+                <img src="./assets/images/coming-soon.jpg" alt="Project Placeholder Image 4">
+              </a>
             </div>
           </section>
         </section>
-        <section>
+        <section id="contact">
+          <hr>
           <h2>Contact</h2>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum laborum debitis expedita ex quo, eius odit qui nobis consectetur, ut praesentium fugiat? Laudantium culpa nostrum quis vitae ex nulla molestiae molestias sequi libero sapiente autem quam possimus tenetur enim dolores eos fugiat rerum, maiores distinctio beatae est ab, aut soluta. Suscipit, tempora necessitatibus. Eius, aperiam? Nesciunt eaque velit id, ipsam dolores nam recusandae hic doloribus corporis excepturi expedita eligendi consequuntur iste culpa aperiam qui aspernatur incidunt impedit ipsa rerum fuga. Magnam quo distinctio veritatis eius optio perspiciatis quam. Inventore vero blanditiis sunt. Odio vel dolores officia, doloremque nemo nulla non.</p>
+          <div class="container-contact">
+            <ul>
+              <li><a href="https://github.com/matthewbush55" target="_blank">
+                <img src="./assets/images/GitHub-Mark-64px.png" alt="GitHub Logo">
+              </a></li>
+              <li><a href="https://stackexchange.com/users/22014112/matt-bush" target="_blank">
+                <img src="./assets/images/512px-Stack_Overflow_icon.png" alt="Stack Overflow Logo">
+              </a></li>
+              </li>
+              <li><a href="https://www.linkedin.com/in/matthewrbush/" target="_blank">
+                <img id="logo-resize" src="./assets/images/LI-In-Bug.png" alt="Stack Overflow Logo">
+              </a></li>
+            </ul>
+          </div>
         </section>
-
-        <!-- Footer with links to other websites hosting my work -->
-        <!-- <footer>
-        <p>lorem10</p>
-      </footer> -->
       </div>
     </main>
   </body>
