@@ -1,57 +1,74 @@
+<!-- HTML boilerplate -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Link normalize and external css files -->
     <link rel="stylesheet" type="text/css" href="./assets/css/normalize.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
+    <!-- Change wording on the browser tab -->
     <title>Matt Bush - Professional Portfolio</title>
   </head>
   <body>
     <!-- Header with name & nav bar -->
     <header class="wide-spacing">
+      <!-- Span is used to change the font of the last name -->
       <h1>Matt <span class="no-weight">Bush</span></h1>
       <!-- Navigation bar -->
       <nav>
+        <!-- Displayed in a list element so the text elements can be styled -->
         <ul>
+          <!-- Links to anchor tags with the corresponding id on the page and takes the user there when clicked -->
           <li><a href="#about">About</a></li>
           <li><a href="#portfolio">Portfolio</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
     </header>
+    <!-- Container for banner elements -->
     <div class="banner-container">
       <img class="banner-img" src="./assets/images/beach.jpg" alt="Sunset on the beach">
       <img class="self-portrait" src="./assets/images/me.jpg" alt="Self photo with mountains in background">  
     </div>
-
+    <!-- Main container for all elements outside of the nav bar and banner  -->
     <main class="container-main">
-        <!-- About, Portfolio, and Contact Sections -->
+        <!-- About, Portfolio, and Contact Section elements -->
+        <!-- Id linking to the About link in the nav bar -->
         <section id="about">
+          <!-- Section heading text -->
           <h2>About</h2>
           <p>
             Detail-oriented front-end web developer leveraging I.T./Cybersecurity background to build more engaging and secure applications on the web. Recently earned a certificate in full stack development from the University of Denver, with newly developed skills in JavaScript, CSS, React.js, and responsive web design. Known as an analytical problem solver with a never-ending drive to constantly improve on projects and skills. With each project, my aim is to fully understand my customer’s desired outcome and exceed their expectations. I’m excited to leverage my skills as part of a fast-paced, quality-driven team to create better experiences on the web. 
           </p>
         </section>
+        <!-- Id selector linking to the Portfolio link in the nav bar -->
         <section id="portfolio">
           <hr>
+          <!-- Section heading text -->
           <h2>Portfolio</h2>
+          <!-- Container for project cards -->
           <section class="container-cards">
+            <!-- Container for the largest card on the top of the other cards -->
             <div class="card card-main">
+              <!-- Container for card labels -->
               <div class="card-label">
                 <p>Card Main</p>
                 <p class="card-description-font">description</p>
               </div>
+              <!-- Placeholder link until projects are created -->
               <a href="#">
                 <img src="./assets/images/coming-soon.jpg" alt="Project Placeholder Image 1">
               </a>
             </div>
+            <!-- Container for non-main cards -->
             <div class="card">
               <div class="card-label">
                 <p>Card 2</p>
                 <p class="card-description-font">description</p>
               </div>
+              <!-- Placeholder link until projects are created -->
               <a href="#">
                 <img src="./assets/images/coming-soon.jpg" alt="Project Placeholder Image 2">
               </a>
@@ -61,6 +78,7 @@
                 <p>Card 3</p>
                 <p class="card-description-font">description</p>
               </div>
+              <!-- Placeholder link until projects are created -->
               <a href="#">
                 <img src="./assets/images/coming-soon.jpg" alt="Project Placeholder Image 3">
               </a>
@@ -70,16 +88,21 @@
                 <p>Card 4</p>
                 <p class="card-description-font">description</p>
               </div>
+              <!-- Placeholder link until projects are created -->
               <a href="#">
                 <img src="./assets/images/coming-soon.jpg" alt="Project Placeholder Image 4">
               </a>
             </div>
           </section>
         </section>
+        <!-- Id selector linking to the Contact link in the nav bar -->
         <section id="contact">
           <hr>
+          <!-- Section heading text -->
           <h2>Contact</h2>
+          <!-- Container for Contact section external links -->
           <div class="container-contact">
+            <!-- Displayed in a list element so the text elements can stay related to eachother for styling -->
             <ul>
               <li><a href="https://github.com/matthewbush55" target="_blank">
                 <img src="./assets/images/GitHub-Mark-64px.png" alt="GitHub Logo">

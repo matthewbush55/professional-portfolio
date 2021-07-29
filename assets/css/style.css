@@ -45,6 +45,7 @@ header {
 }
 
 header h1 {
+  /* Align name to the left of the nav bar */
   margin: 0;
 }
 
@@ -68,89 +69,116 @@ nav a {
   padding: 0 10px 0 10px;
 }
 
+/* Container for large banner image and portrait image */
 .banner-container {
   display: flex;
+  /* Keep the banner below the nav bar element */
   position: relative;
   top: 0px;
   left: 0px;
+  /* Add space between banner and profile sections */
   margin: 0 0 75px 0;
 }
 
+/* Large banner image below nav bar */
 .banner-img {
+  /* Keep the banner below the nav bar element */
   position: relative;
   top: 0px;
   left: 0px;
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%);
   height: 700px;
+  /* Make banner fill the width of the screen */
   width: 100%;
 }
 
 .self-portrait {
+  /* Align portrait in a set position outside the container but relative to the large banner image */
   position: absolute;
   top: 600px;
   right: 45%;
   max-width: 200px;
+  /* Convert square profile picture into a circle */
   border-radius: 50%;
 }
 
+/* Container for all child elements of the main element. This is all page content outside of the nav bar and banner image */
 .container-main {
+  /* Alight all main content using flexbox */
   display: flex;
+  /* Orient the main axis of the flexbox to vertical */
   flex-direction: column;
+  /* Add space on the left & right between the viewport and the main content */
   padding: 25px 50px;
   margin-left: 15%;
   margin-right: 15%;
 }
 
+/* Containers for individual portfolio cards */
 .container-cards {
   display: flex;
+  /* Convert flexbox from main content from column to row and wrap images as viewport size changes */
   flex-flow: row wrap;
-  /* padding: 0 150px 20px 150px; */
   background-color: #cacaca;
   margin-bottom: 20px;
 }
 
+/* Card that will be the first and largest card */
 .card-main {
+  /* Position main card relative to the card container */
   position: relative;
   border-style: solid;
   border-color: var(--palDark);
+  /* Stretch the card the length of the container */
   min-width: 100%;
   height: auto;
+  /* Ensure the main card grows at a larger ratio then other cards */
   flex: 1;
 }
 
+/* Container for non-main cards */
 .card {
+  /* Position main card relative to the card container */
   position: relative;
   border-style: solid;
   border-color: var(--palDark);
+  /* Ensure the non-main cards grow at at the same ratio */
   flex: 1;
 }
 
+/* Label within each card with information about the project for that card */
 .card-label {
+  /* Ensure a static position for the label in relation to the card */
   position: absolute;
   background-color: var(--palLight);
   box-shadow: none;
   bottom: 10%;
   padding: 15px 35px 0 0;
   line-height: 1px;
-  z-index: 0;
 }
+
+/* Styles the p elements within the card label class */
 .card-label > p {
   padding: 0 40px 0 0;
   text-align: left;
 }
 
+/* Style font of the description of each project below the name */
 .card-description-font {
   font-size: 12px;
   line-height: 1;
   text-align: left;
 }
 
+/* Style of the card background images */
 .card img {
+  /* Ensure the image does not break out of the card container */
   max-width: 100%;
   height: auto;
   border: none;
 }
 
+/* Style the ul elements in the contact section container */
 .container-contact ul {
   /* Set the header to a flex container and add space between its child elements */
   display: flex;
@@ -164,11 +192,13 @@ nav a {
   margin: 0;
 }
 
+/* Set the contact images to a smaller, uniform size */
 .container-contact img {
   width: 64px;
   height: 64px;
 }
 
+/* Resize the LinkedIn logo due to its default size being too large */
 #logo-resize {
   max-width: 100%;
   height: auto;
@@ -184,7 +214,8 @@ nav a {
   font-weight: normal;
 }
 
-/* Change display to flex column when viewport is less then 589px in width */
+/* Media breakpoints were based on content and not typical device screen sizes */
+/* Change display to flex column when viewport is less then 768px in width */
 @media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
@@ -197,25 +228,22 @@ nav a {
     padding: 0;
     margin: 0;
   }
-  /* Adjust padding of header elements when viewport is less then 589px in width  */
+  /* Adjust padding of header elements when viewport is less then 768px in width  */
   header.wide-spacing {
     padding: 0 5px 0 15px;
   }
-
+  /* Remove margins from the main container when the viewport is less then 768px in width  */
   .container-main {
     margin: 0;
   }
-
+  /* Make card labels smaller so they don't take up the whole card when the viewport is less then 768px in width  */
   .card-label {
     padding: 10px 30px 10px 0;
   }
-
-  /* section p {
-    font-size: 12px;
-  } */
 }
-
+/* Change display to flex column when viewport is less then 576px in width */
 @media screen and (max-width: 576px) {
+  /* Convert the flexbox main axis from row to column so images can be seen on smaller screens. This removes the main cards larger size. */
   .container-cards {
     flex-direction: column;
     justify-content: space-evenly;
@@ -224,26 +252,30 @@ nav a {
     /* Fix header from shrinking past 100px to prevent elements from becoming to close and/or out of the viewport*/
     min-width: 100px;
     min-height: 100px;
+    /* Remove border/padding on card containers so there is no large border on smaller screens */
     padding: 0;
     margin: 0;
   }
 }
 
+/* Change display to flex column when viewport is less then 372px in width */
 @media screen and (max-width: 372px) {
+  /* Move card labels from left side of card to the top of the card and center the text. This is easier to read labels on smaller screens. */
   .card-label {
     position: sticky;
     text-align: center;
     padding: 10px;
   }
-
+  /* Add space between the banner container and the first section */
   .banner-container {
     margin: 0 0 40px 0;
   }
-
+  /* Remove large banner image on smaller screens do to it taking up too much space */
   .banner-img {
     display: none;
   }
 
+  /* Keep the self portrait image centered on smaller screens */
   .self-portrait {
     position: relative;
     top: 30px;
@@ -251,16 +283,25 @@ nav a {
     width: 50%;
     height: 50%;
   }
-
+  /* Remove top/bottom padding and add back padding on left/right on card containers so there is space on smaller screens */
   .container-main {
     padding: 0px 50px;
   }
 
+  /* Align section headings to the center when viewport is less then 372px in width */
+  .container-main h2 {
+    text-align: center;
+  }
+  /* Align p tags in  to the center when viewport is less then 372px in width */
   .container-main p {
     text-align: center;
   }
-
+  /* Remove padding from card label paragrapgh elements that contain the project descriptions. */
   .card-label > p {
     padding: 0;
+  }
+  /* Style the contact container ul elements when viewport is less then 372px in width */
+  .container-contact ul {
+    /* Remove minimum witdth so the container is centered in the viewport */
   }
 }
