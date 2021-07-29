@@ -35,18 +35,13 @@ header {
   /* Fix header to the top of the viewport */
   position: sticky;
   top: 0px;
-  padding: 20px;
+  padding: 0 20px;
   background-color: var(--palHeaderFooter);
   color: var(--pal2light);
   box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%);
   font-size: 15px;
   /* Keep header on top of all other elements on the page */
   z-index: 1;
-}
-
-header h1 {
-  /* Align name to the left of the nav bar */
-  margin: 0;
 }
 
 nav ul {
@@ -260,6 +255,12 @@ nav a {
 
 /* Change display to flex column when viewport is less then 372px in width */
 @media screen and (max-width: 372px) {
+  /* Remove top, bottom, left margins and shrink line spacing when viewport is less then 372px in width */
+  header h1 {
+    margin: 0 40px 0 0;
+    line-height: 1;
+  }
+
   /* Move card labels from left side of card to the top of the card and center the text. This is easier to read labels on smaller screens. */
   .card-label {
     position: sticky;
