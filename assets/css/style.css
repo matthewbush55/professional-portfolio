@@ -1,11 +1,11 @@
 /* Styling variables to centralize styling */
 :root {
   /* Color Pallete */
-  --palDark: #4d4646;
-  --palMedium: #5b5656;
-  --palLight: #7fcd91;
+  --palDark: #07031a;
+  --palMedium: #4f8a8b;
+  --palLight: #ffcb74;
   --palWhite: #fff;
-  --palAccent: #f5eaea;
+  --palAccent: #b1b493;
 }
 
 /* Set box sizing universally to calculate the width & height as part of the element*/
@@ -43,30 +43,6 @@ header {
   z-index: 1;
 }
 
-.banner-container {
-  display: flex;
-  position: relative;
-  top: 0px;
-  left: 0px;
-}
-
-.banner-img {
-  position: relative;
-  top: 0px;
-  left: 0px;
-  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%);
-  height: 700px;
-  width: 100%;
-}
-
-.self-portrait {
-  position: absolute;
-  bottom: 25px;
-  right: 30px;
-  max-width: 200px;
-  border-radius: 50%;
-}
-
 header h1 {
   margin: 0;
 }
@@ -91,6 +67,31 @@ nav a {
   padding: 0 10px 0 10px;
 }
 
+.banner-container {
+  display: flex;
+  position: relative;
+  top: 0px;
+  left: 0px;
+  margin: 0 0 75px 0;
+}
+
+.banner-img {
+  position: relative;
+  top: 0px;
+  left: 0px;
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%);
+  height: 700px;
+  width: 100%;
+}
+
+.self-portrait {
+  position: absolute;
+  top: 600px;
+  right: 45%;
+  max-width: 200px;
+  border-radius: 50%;
+}
+
 .container-main {
   display: flex;
   flex-direction: column;
@@ -108,12 +109,15 @@ nav a {
 }
 
 .card-main {
+  position: relative;
+  border-style: solid;
+  border-color: var(--palDark);
   min-width: 100%;
   height: auto;
+  flex: 1;
 }
 
-.card,
-.card-main {
+.card {
   position: relative;
   border-style: solid;
   border-color: var(--palDark);
@@ -125,8 +129,19 @@ nav a {
   background-color: var(--palLight);
   box-shadow: none;
   bottom: 10%;
-  padding: 15px 40px 15px 0;
+  padding: 15px 35px 0 0;
+  line-height: 1px;
   z-index: 0;
+}
+.card-label > p {
+  padding: 0 40px 0 0;
+  text-align: left;
+}
+
+.card-description-font {
+  font-size: 12px;
+  line-height: 1;
+  text-align: left;
 }
 
 .card img {
@@ -146,7 +161,7 @@ nav a {
 }
 
 /* Change display to flex column when viewport is less then 589px in width */
-@media screen and (max-width: 589px) {
+@media screen and (max-width: 768px) {
   nav ul {
     flex-direction: column;
     justify-content: space-evenly;
@@ -171,12 +186,12 @@ nav a {
     padding: 10px 30px 10px 0;
   }
 
-  section p {
+  /* section p {
     font-size: 12px;
-  }
+  } */
 }
 
-@media screen and (max-width: 417px) {
+@media screen and (max-width: 576px) {
   .container-cards {
     flex-direction: column;
     justify-content: space-evenly;
@@ -190,14 +205,15 @@ nav a {
   }
 }
 
-@media screen and (max-width: 334px) {
+@media screen and (max-width: 372px) {
   .card-label {
     position: sticky;
     text-align: center;
-    padding: 10px 0;
+    padding: 10px;
   }
-  section p {
-    font-size: 10px;
+
+  .banner-container {
+    margin: 0 0 40px 0;
   }
 
   .banner-img {
@@ -206,16 +222,21 @@ nav a {
 
   .self-portrait {
     position: relative;
+    top: 30px;
+    left: 25%;
     width: 50%;
     height: 50%;
-    margin: 50px 75px 0 100px;
   }
 
   .container-main {
     padding: 0px 50px;
   }
 
-  .container-main h2 {
+  .container-main p {
     text-align: center;
+  }
+
+  .card-label > p {
+    padding: 0;
   }
 }
