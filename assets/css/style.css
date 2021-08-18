@@ -64,6 +64,10 @@ nav a {
   padding: 0 10px 0 10px;
 }
 
+a {
+  color: #fff;
+}
+
 /* Container for large banner image and portrait image */
 .banner-container {
   display: flex;
