@@ -149,7 +149,7 @@ nav a {
   bottom: 10%;
   padding: 15px 35px 0 0;
   line-height: 1px;
-  font-size: 30px;
+  font-size: 20px;
   color: #fff;
 }
 
@@ -245,6 +245,11 @@ nav a {
   /* Make card labels smaller so they don't take up the whole card when the viewport is less then 768px in width  */
   .card-label {
     padding: 10px 30px 10px 0;
+    position: absolute;
+    bottom: 0;
+    height: 4rem;
+    font-size: 15px;
+    width: 100%;
   }
 }
 /* Change display to flex column when viewport is less then 576px in width */
@@ -274,9 +279,9 @@ nav a {
 
   /* Move card labels from left side of card to the top of the card and center the text. This is easier to read labels on smaller screens. */
   .card-label {
-    position: sticky;
     text-align: center;
     padding: 10px;
+    width: 100%;
   }
   /* Add space between the banner container and the first section */
   .banner-container {
