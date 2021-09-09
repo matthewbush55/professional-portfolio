@@ -62,11 +62,6 @@ nav a {
   /* Remove underline style from links in nav bar */
   text-decoration: none;
   padding: 0 10px 0 10px;
-  color: var(--palDark);
-}
-
-a {
-  color: var(--palDark);
 }
 
 /* Container for large banner image and portrait image */
